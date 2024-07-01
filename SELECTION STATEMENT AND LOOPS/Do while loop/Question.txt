@@ -1,0 +1,1 @@
+Find all Armstrong numbers between 9999 to 99999

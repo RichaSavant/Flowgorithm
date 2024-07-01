@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-09 09:22:25 AM"/>
+        <attribute name="created" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wNzsxMTowMzoyMCBQTTsyMTA4"/>
+        <attribute name="edited" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wOTswOToyMjoyNSBBTTsyOzIyMTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number to check if it is perfect.&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <if expression="n%i=0">
+                    <then>
+                        <assign variable="sum" expression="sum+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="sum=n">
+                <then>
+                    <output expression="&quot;The number is perfect.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The number is not perfect.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

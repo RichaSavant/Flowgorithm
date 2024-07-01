@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-24 10:10:45 AM"/>
+        <attribute name="created" value="bGVub3ZvO0RFU0tUT1AtSlIxMkY5VjsyMDIxLTEyLTI0OzEwOjA1OjUzIEFNOzI5Njc="/>
+        <attribute name="edited" value="bGVub3ZvO0RFU0tUT1AtSlIxMkY5VjsyMDIxLTEyLTI0OzEwOjEwOjQ1IEFNOzE7MzA3Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="f, i, n, d, r, copy" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="10000"/>
+            <output expression="&quot; The 5 digit palindrome no. is &quot;" newline="True"/>
+            <do expression="n&lt;99999">
+                <assign variable="d" expression="0"/>
+                <assign variable="r" expression="0"/>
+                <assign variable="copy" expression="n"/>
+                <while expression="copy&gt;0">
+                    <assign variable="d" expression="copy % 10"/>
+                    <assign variable="r" expression="r*10+d"/>
+                    <assign variable="copy" expression="copy/10"/>
+                </while>
+                <if expression="n==r">
+                    <then>
+                        <output expression="n" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="n" expression="n+1"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

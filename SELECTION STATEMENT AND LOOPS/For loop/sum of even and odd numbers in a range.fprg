@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-07 11:00:48 PM"/>
+        <attribute name="created" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wNzsxMDo1MToyNSBQTTsyMTE1"/>
+        <attribute name="edited" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wNzsxMTowMDo0OCBQTTszOzIyMjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, evensum, oddsum, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the upper limit.&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="evensum" expression="0"/>
+            <assign variable="oddsum" expression="0"/>
+            <for variable="i" start="1" end="num" direction="inc" step="1">
+                <if expression="i%2=0">
+                    <then>
+                        <assign variable="evensum" expression="evensum+i"/>
+                    </then>
+                    <else>
+                        <assign variable="oddsum" expression="oddsum+i"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;The sum of even numbers in the range is:&quot; &amp;evensum &amp; &quot; The sum of odd numbers in the range is:&quot; &amp;oddsum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

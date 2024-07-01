@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rishika"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-08 10:19:21 AM"/>
+        <attribute name="created" value="UmlzaGlrYTtERVNLVE9QLUMzQUVCSks7MjAyMS0xMi0wMzswOTowNTo0OCBBTTszMDMx"/>
+        <attribute name="edited" value="UmlzaGlrYTtERVNLVE9QLUMzQUVCSks7MjAyMS0xMi0wMzswOToxMzoxMiBBTTsxOzMxMjk="/>
+        <attribute name="edited" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wODsxMDoxOToyMSBBTTszOzIyMTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, count, i" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <output expression="&quot;enter your number&quot;" newline="True"/>
+            <input variable="num"/>
+            <for variable="i" start="1" end="num" direction="inc" step="1">
+                <if expression="num%i=0">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="count=2">
+                <then>
+                    <output expression="&quot;given number is a prime number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;given number is a composite number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
