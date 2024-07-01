@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Praneeth Reddy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-19 12:17:21 PM"/>
+        <attribute name="created" value="UHJhbmVldGggUmVkZHk7UFJBTkVFVEgtUEM7MjAyMS0xMi0yNzswMjo0OTozMSBQTTszNDMw"/>
+        <attribute name="edited" value="UHJhbmVldGggUmVkZHk7UFJBTkVFVEgtUEM7MjAyMi0wMS0xOTsxMjoxNzoyMSBQTTs3OzM1Mzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, i, max, n, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of integers&quot;" newline="True"/>
+            <input variable="size"/>
+            <assign variable="max" expression="0"/>
+            <declare name="count" type="Integer" array="True" size="size"/>
+            <output expression="&quot;enter the numbers&quot;" newline="True"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <input variable="count[i]"/>
+            </for>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <if expression="count[i]&gt;max">
+                    <then>
+                        <assign variable="max" expression="count[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="n" start="0" end="max" direction="inc" step="1">
+                <assign variable="c" expression="0"/>
+                <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                    <if expression="count[i]==n">
+                        <then>
+                            <assign variable="c" expression="c+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="c==0">
+                    <then/>
+                    <else>
+                        <output expression="&quot;the count of &quot;&amp;n&amp;&quot; is &quot;&amp;c" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

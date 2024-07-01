@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-03 03:59:39 PM"/>
+        <attribute name="created" value="SFA7S1BTOzIwMjItMDEtMDM7MDI6NDY6MzggUE07MTY2Nw=="/>
+        <attribute name="edited" value="SFA7S1BTOzIwMjItMDEtMDM7MDM6NTk6MzkgUE07MzsxNzgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, n, c, b" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="j" expression="0"/>
+            <assign variable="c" expression="0"/>
+            <output expression="&quot;enter array size&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <output expression="&quot;enter the numbers&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="b" expression="0"/>
+                <assign variable="c" expression="a[i]"/>
+                <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="a[j]=c">
+                        <then>
+                            <assign variable="b" expression="b+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="b=1">
+                    <then>
+                        <output expression="c" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Praneeth Reddy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-18 03:40:25 PM"/>
+        <attribute name="created" value="UHJhbmVldGggUmVkZHk7UFJBTkVFVEgtUEM7MjAyMS0xMi0yNzswMjo0OTozMSBQTTszNDMw"/>
+        <attribute name="edited" value="UHJhbmVldGggUmVkZHk7UFJBTkVFVEgtUEM7MjAyMi0wMS0wNTswMTozNToyNSBBTTs2OzM1MjA="/>
+        <attribute name="edited" value="a2FydGg7TEFQVE9QLURQSFZGOEFEOzIwMjItMDEtMTg7MDM6NDA6MjUgUE07NjsyOTk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, j, c, count" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of integers&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="array" type="Integer" array="True" size="n"/>
+            <output expression="&quot;enter the numbers&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="array[i]"/>
+            </for>
+            <assign variable="c" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                    <if expression="array[i]&gt;array[j]">
+                        <then>
+                            <assign variable="c" expression="array[i]"/>
+                            <assign variable="array[i]" expression="array[j]"/>
+                            <assign variable="array[j]" expression="c"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="array[i]" newline="True"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="count" expression="1"/>
+                <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                    <if expression="array[i]=array[j]">
+                        <then>
+                            <assign variable="count" expression="count+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="count=0">
+                    <then/>
+                    <else>
+                        <output expression="&quot;the count of &quot;&amp;array[i]&amp;&quot; is &quot;&amp;count" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="i" expression="i+count-1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

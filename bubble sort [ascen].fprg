@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Praneeth Reddy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-12 12:18:36 PM"/>
+        <attribute name="created" value="UHJhbmVldGggUmVkZHk7UFJBTkVFVEgtUEM7MjAyMi0wMS0xMjsxMTo1ODo0OCBBTTszNDE2"/>
+        <attribute name="edited" value="UHJhbmVldGggUmVkZHk7UFJBTkVFVEgtUEM7MjAyMi0wMS0xMjsxMjoxODozNiBQTTsxOzM1MzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, j, i, tem" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of integers&quot;" newline="True"/>
+            <input variable="size"/>
+            <declare name="num" type="Integer" array="True" size="size"/>
+            <output expression="&quot;enter the numbers&quot;" newline="True"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+            </for>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <for variable="j" start="0" end="(size-1)-i-1" direction="inc" step="1">
+                    <if expression="num[j]&gt;num[j+1]">
+                        <then>
+                            <assign variable="tem" expression="num[j]"/>
+                            <assign variable="num[j]" expression="num[j+1]"/>
+                            <assign variable="num[j+1]" expression="tem"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <output expression="num[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

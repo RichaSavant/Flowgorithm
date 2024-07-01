@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="crossover"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-17 08:21:21 PM"/>
+        <attribute name="created" value="Y3Jvc3NvdmVyO0dBVFRBTUFORU5JU0FJUjsyMDIyLTAxLTE3OzAzOjE2OjU3IFBNOzMzOTE="/>
+        <attribute name="edited" value="Y3Jvc3NvdmVyO0dBVFRBTUFORU5JU0FJUjsyMDIyLTAxLTE3OzA4OjIxOjIxIFBNOzM7MzQ5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;please enter the size of the array&quot;" newline="True"/>
+            <declare name="n, i, j, t" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="ar" type="Integer" array="True" size="n"/>
+            <output expression="&quot;please enter the elements of the array&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="ar[i]"/>
+            </for>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <for variable="j" start="0" end="n-i-1" direction="inc" step="1">
+                    <if expression="ar[j]&gt;ar[j+1]">
+                        <then>
+                            <assign variable="t" expression="ar[j]"/>
+                            <assign variable="ar[j]" expression="ar[j+1]"/>
+                            <assign variable="ar[j+1]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <declare name="ele, freq" type="Integer" array="False" size=""/>
+            <assign variable="ele" expression="ar[0]"/>
+            <assign variable="freq" expression="1"/>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <if expression="ar[i]==ele">
+                    <then>
+                        <assign variable="freq" expression="freq+1"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;the frequency of &quot;&amp;ele&amp;&quot; is &quot;&amp;freq" newline="True"/>
+                        <assign variable="freq" expression="1"/>
+                        <assign variable="ele" expression="ar[i]"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;the frequency of &quot;&amp;ele&amp;&quot; is &quot;&amp;freq" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
