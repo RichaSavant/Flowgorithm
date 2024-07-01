@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-30 12:23:46 PM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTAtMzA7MTI6MjA6MTAgUE07Mjc5OQ=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTAtMzA7MTI6MjM6NDYgUE07MTsyOTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Real" array="False" size=""/>
+            <declare name="result" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the number.&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="result" expression="number*number*number"/>
+            <output expression="&quot;the cube of the number is &quot; &amp;result" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
