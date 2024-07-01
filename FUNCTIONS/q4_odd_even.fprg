@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ishu2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 09:38:56 AM"/>
+        <attribute name="created" value="aXNodTI7TEFQVE9QLUdSTjNHVUMxOzIwMjItMDEtMjE7MDk6MDE6NDMgQU07MjgxMA=="/>
+        <attribute name="edited" value="aXNodTI7TEFQVE9QLUdSTjNHVUMxOzIwMjItMDEtMjE7MDk6Mzg6NTYgQU07MjsyOTMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, x" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number to check if it is odd or even&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="x" expression="oddeven(n)"/>
+            <if expression="x==1">
+                <then>
+                    <output expression="n&amp;&quot; is even&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="n&amp;&quot; is odd&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="oddeven" type="Integer" variable="x">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <if expression="num%2==0">
+                <then>
+                    <assign variable="x" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="x" expression="0"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

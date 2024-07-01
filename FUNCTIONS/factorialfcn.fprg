@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 08:46:10 AM"/>
+        <attribute name="created" value="TEVOT1ZPO0JFTjEwR09LVTsyMDIyLTAxLTIxOzA4OjM0OjQ2IEFNOzIzNTE="/>
+        <attribute name="edited" value="TEVOT1ZPO0JFTjEwR09LVTsyMDIyLTAxLTIxOzA4OjQ2OjEwIEFNOzU7MjQ1Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, i, c, j, n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="a" expression="fact(n)"/>
+            <output expression="a" newline="True"/>
+        </body>
+    </function>
+    <function name="fact" type="Integer" variable="b">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="b, i" type="Integer" array="False" size=""/>
+            <assign variable="b" expression="1"/>
+            <for variable="i" start="1" end="a" direction="inc" step="1">
+                <assign variable="b" expression="b*i"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="vidul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 08:46:18 AM"/>
+        <attribute name="created" value="dmlkdWw7REVTS1RPUC1QOUlSNUM5OzIwMjItMDEtMjE7MDg6Mzg6MjMgQU07Mjg2Mw=="/>
+        <attribute name="edited" value="dmlkdWw7REVTS1RPUC1QOUlSNUM5OzIwMjItMDEtMjE7MDg6NDU6MTEgQU07MTt2aWR1bDtERVNLVE9QLVA5SVI1Qzk7MjAyMS0xMS0xOTswODo0Mzo0OSBBTTtmYWN0b3JpYWxvZmFudW0uZnByZzs4MDMw"/>
+        <attribute name="edited" value="dmlkdWw7REVTS1RPUC1QOUlSNUM5OzIwMjItMDEtMjE7MDg6NDY6MTggQU07MTsyOTc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="factorial()"/>
+        </body>
+    </function>
+    <function name="factorial" type="None" variable="num">
+        <parameters/>
+        <body>
+            <declare name="a, i" type="Integer" array="False" size=""/>
+            <declare name="factorial" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number to find the factorial&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="factorial" expression="1"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i &lt;= a">
+                <assign variable="factorial" expression="factorial*i"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="&quot;Factorial of number is&quot; &amp;factorial" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Nandini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 09:43:32 AM"/>
+        <attribute name="created" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0yMTswOTozNzoxOCBBTTsyOTc2"/>
+        <attribute name="edited" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0yMTswOTo0MzozMiBBTTsxOzMwNzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="z, a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the first number&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter the second number&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Enter the third number&quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="z" expression="largest(a,b,c)"/>
+            <output expression="&quot;The largest of three numbers is: &quot;&amp;z" newline="True"/>
+        </body>
+    </function>
+    <function name="largest" type="Integer" variable="large">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+            <parameter name="c" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="large" type="Integer" array="False" size=""/>
+            <if expression="a&gt;b &amp;&amp; a&gt;c">
+                <then>
+                    <assign variable="large" expression="a"/>
+                </then>
+                <else>
+                    <if expression="b&gt;c">
+                        <then>
+                            <assign variable="large" expression="b"/>
+                        </then>
+                        <else>
+                            <assign variable="large" expression="c"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

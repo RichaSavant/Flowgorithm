@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="subhi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 10:21:34 AM"/>
+        <attribute name="created" value="c3ViaGk7TEFQVE9QLUFTRFVJUTJIOzIwMjItMDEtMjE7MTA6MDY6NDYgQU07Mjg4MQ=="/>
+        <attribute name="edited" value="c3ViaGk7TEFQVE9QLUFTRFVJUTJIOzIwMjItMDEtMjE7MTA6MjE6MzQgQU07MjsyOTg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, n, i, ans" type="Real" array="False" size=""/>
+            <output expression="&quot;enter m&quot;" newline="True"/>
+            <input variable="m"/>
+            <output expression="&quot;enter n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="output" type="Real" array="False" size=""/>
+            <assign variable="output" expression="power(m,n)"/>
+            <output expression="&quot;&quot;&amp;output" newline="True"/>
+        </body>
+    </function>
+    <function name="power" type="Real" variable="ans">
+        <parameters>
+            <parameter name="m" type="Real" array="False"/>
+            <parameter name="n" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="ans" type="Real" array="False" size=""/>
+            <assign variable="ans" expression="1"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="ans" expression="ans*m"/>
+            </for>
+            <output expression="&quot;&quot; &amp;m&amp; &quot; raised to the power of &quot; &amp;n&amp; &quot; = &quot; &amp;ans" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

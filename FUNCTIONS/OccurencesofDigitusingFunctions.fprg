@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 09:41:38 AM"/>
+        <attribute name="created" value="REVMTDtQUkFCSEFWLUxBUFRPUDsyMDIyLTAxLTIxOzA5OjI4OjEzIEFNOzI1NzY="/>
+        <attribute name="edited" value="REVMTDtQUkFCSEFWLUxBUFRPUDsyMDIyLTAxLTIxOzA5OjQxOjM4IEFNOzE7MjY4Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the  Number &quot;" newline="True"/>
+            <input variable="number"/>
+            <output expression="&quot;The occurences of the digit in the given number = &quot; &amp; Frequency(number)" newline="True"/>
+        </body>
+    </function>
+    <function name="Frequency" type="Integer" variable="count">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="size, c, s, count, d, i" type="Integer" array="False" size=""/>
+            <declare name="str" type="String" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <assign variable="c" expression="0"/>
+            <assign variable="str" expression="ToString(n)"/>
+            <assign variable="size" expression="Len(str)"/>
+            <declare name="a" type="Integer" array="True" size="size"/>
+            <while expression="n &gt; 0">
+                <assign variable="d" expression="n % 10"/>
+                <assign variable="a[c]" expression="d"/>
+                <assign variable="c" expression="c+1"/>
+                <assign variable="n" expression="n / 10"/>
+            </while>
+            <output expression="&quot;Enter the Digit you want to search&quot;" newline="True"/>
+            <input variable="s"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <if expression="a[i] == s">
+                    <then>
+                        <assign variable="count" expression="count + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

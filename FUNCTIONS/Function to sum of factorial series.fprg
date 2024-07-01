@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Nandini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-28 09:23:27 AM"/>
+        <attribute name="created" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0yODswODozNzo0MiBBTTsyOTc5"/>
+        <attribute name="edited" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0yODswOToyMzoyNyBBTTsxOzMwODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of terms you want&quot;" newline="True"/>
+            <input variable="n"/>
+            <call expression="sumofseries(n)"/>
+        </body>
+    </function>
+    <function name="factorial" type="Integer" variable="fact">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, fact" type="Integer" array="False" size=""/>
+            <assign variable="fact" expression="1"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="fact" expression="fact*i"/>
+            </for>
+        </body>
+    </function>
+    <function name="sumofseries" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum, i, z" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="z" expression="factorial(i+1)"/>
+                <assign variable="sum" expression="sum+(1/z)"/>
+                <output expression="sum" newline="True"/>
+            </for>
+            <output expression="&quot;The sum of the factorial series is: &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-15 12:18:03 PM"/>
+        <attribute name="created" value="REVMTDtQUkFCSEFWLUxBUFRPUDsyMDIyLTAxLTE1OzEyOjE0OjI2IFBNOzI1ODc="/>
+        <attribute name="edited" value="REVMTDtQUkFCSEFWLUxBUFRPUDsyMDIyLTAxLTE1OzEyOjE4OjAzIFBNOzE7MjY5NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="radius" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the Radius of the Circle&quot;" newline="True"/>
+            <input variable="radius"/>
+            <output expression="&quot;The Area of The Circle = &quot; &amp; (Circle(Radius)) &amp; &quot; sq.units.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="Circle" type="Real" variable="area">
+        <parameters>
+            <parameter name="r" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="area" type="Real" array="False" size=""/>
+            <assign variable="area" expression="3.14 * r * r"/>
+        </body>
+    </function>
+</flowgorithm>

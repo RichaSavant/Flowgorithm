@@ -1,0 +1,12 @@
+4. Write a flowgorithm code with function which will calculate the factorial of the input number. The main function will read the input number from user and pass it to the function. Function will print the number and its factorial
+5. Write a flowgorithm code with function which will count the number of digits in the given input. The result of which should be passed to another function which will check if the number is even or odd
+6. Write a code to with following functions:
+a) function with parameter and return type. This function will reverse the given number
+b) function with parameter which will return the last number of the reversed number
+7.Write a code with following functions:
+a) function with no parameter and return type, that will find the number of even digits in the given number.
+b) function with no return type , that will find the factorial of the number returned by function a
+8. Write a code with following functions:
+a) function with parameter that will return 1 if the input parameter is prime number else it returns 0.
+b) function with the same input parameter as in function a. and print its factors
+9. Write a code using function to compute the area of a circle.

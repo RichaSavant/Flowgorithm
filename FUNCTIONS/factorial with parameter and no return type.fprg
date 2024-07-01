@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 08:45:04 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTU7MDI6NTE6NDkgUE07Mjg0Mw=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjE7MDg6NDU6MDQgQU07NDsyOTM2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number: &quot;" newline="True"/>
+            <input variable="num"/>
+            <call expression="fact(num)"/>
+        </body>
+    </function>
+    <function name="fact" type="None" variable="fac">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, fac" type="Integer" array="False" size=""/>
+            <assign variable="fac" expression="1"/>
+            <for variable="i" start="1" end="num" direction="inc" step="1">
+                <assign variable="fac" expression="fac*i"/>
+            </for>
+            <output expression="&quot;The factorial of the number is: &quot;&amp;fac" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

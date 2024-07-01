@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 09:25:47 AM"/>
+        <attribute name="created" value="REVMTDtERVNLVE9QLVJEQjdITjY7MjAyMS0xMC0zMDswOTozMzowOCBBTTsyNjA4"/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLVJEQjdITjY7MjAyMS0xMC0zMDswOTo1NDoxMyBBTTsxOzI3MTU="/>
+        <attribute name="edited" value="REVMTDtQUkFCSEFWLUxBUFRPUDsyMDIyLTAxLTIxOzA5OjI1OjQ3IEFNOzE7MjY4OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter your Number&quot;" newline="True"/>
+            <input variable="a"/>
+            <call expression="check(a)"/>
+            <if expression="check(a) == 1">
+                <then>
+                    <output expression="&quot;It is a Prime Number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;It is Not a Prime Number&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;It`s Factors are &quot;" newline="True"/>
+            <call expression="Factors(a)"/>
+        </body>
+    </function>
+    <function name="check" type="Integer" variable="f">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="f" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="0"/>
+            <assign variable="f" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <if expression="n % i == 0">
+                    <then>
+                        <assign variable="c" expression="c + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="c == 2">
+                <then>
+                    <assign variable="f" expression="1"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="Factors" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <if expression="n % i == 0">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

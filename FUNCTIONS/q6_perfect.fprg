@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ishu2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 09:36:11 AM"/>
+        <attribute name="created" value="aXNodTI7TEFQVE9QLUdSTjNHVUMxOzIwMjItMDEtMjE7MDk6MjM6MjIgQU07MjgxMQ=="/>
+        <attribute name="edited" value="aXNodTI7TEFQVE9QLUdSTjNHVUMxOzIwMjItMDEtMjE7MDk6MzY6MTEgQU07MzsyOTIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lb, ub, i, x" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter upper bound&quot;" newline="True"/>
+            <input variable="ub"/>
+            <output expression="&quot;Enter the lower bound&quot;" newline="True"/>
+            <input variable="lb"/>
+            <output expression="&quot;The perfect numbers within the range: &quot;" newline="True"/>
+            <for variable="i" start="lb" end="ub" direction="inc" step="1">
+                <assign variable="x" expression="perfect(i)"/>
+                <if expression="x==1">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="perfect" type="Integer" variable="x">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="x, s, i" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="1" end="num-1" direction="inc" step="1">
+                <if expression="num%i==0">
+                    <then>
+                        <assign variable="s" expression="s+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="s==num">
+                <then>
+                    <assign variable="x" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="x" expression="0"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

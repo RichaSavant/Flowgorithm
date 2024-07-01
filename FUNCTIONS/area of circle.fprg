@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Administrator"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 09:36:18 AM"/>
+        <attribute name="created" value="QWRtaW5pc3RyYXRvcjtKRUVCQU47MjAyMi0wMS0yMTswODo0MjozMSBBTTszMDU1"/>
+        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtKRUVCQU47MjAyMi0wMS0yMTswOTozNjoxOCBBTTs0OzMxNzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="z" type="Real" array="False" size=""/>
+            <output expression="&quot;Finding area of the circle: &quot;" newline="True"/>
+            <assign variable="z" expression="area()"/>
+            <output expression="&quot;area of circle: &quot; &amp;z" newline="True"/>
+        </body>
+    </function>
+    <function name="area" type="Real" variable="a">
+        <parameters/>
+        <body>
+            <declare name="r, z" type="Integer" array="False" size=""/>
+            <declare name="a" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the radius&quot;" newline="True"/>
+            <input variable="r"/>
+            <assign variable="a" expression="3.14*r*r"/>
+        </body>
+    </function>
+</flowgorithm>

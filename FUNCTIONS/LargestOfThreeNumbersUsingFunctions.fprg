@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 09:52:38 AM"/>
+        <attribute name="created" value="REVMTDtQUkFCSEFWLUxBUFRPUDsyMDIyLTAxLTIxOzA5OjQ1OjU4IEFNOzI1ODQ="/>
+        <attribute name="edited" value="REVMTDtQUkFCSEFWLUxBUFRPUDsyMDIyLTAxLTIxOzA5OjUyOjM4IEFNOzE7MjY4OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, n, p" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input the three numbers&quot;" newline="True"/>
+            <input variable="m"/>
+            <input variable="n"/>
+            <input variable="p"/>
+            <output expression="&quot;Largest of the three numbers = &quot; &amp; Check(m,n,p)" newline="True"/>
+        </body>
+    </function>
+    <function name="Check" type="Integer" variable="r">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+            <parameter name="c" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <if expression="a &gt; b &amp;&amp; a &gt; c">
+                <then>
+                    <assign variable="r" expression="a"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="b &gt; a &amp;&amp; b &gt; c">
+                <then>
+                    <assign variable="r" expression="b"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="c &gt; a &amp;&amp; c &gt; b">
+                <then>
+                    <assign variable="r" expression="c"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

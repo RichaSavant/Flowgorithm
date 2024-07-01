@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Nandini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-14 10:16:47 AM"/>
+        <attribute name="created" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0xNDswODo1OTo0NSBBTTsyOTgx"/>
+        <attribute name="edited" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0xNDsxMDoxNjo0NyBBTTsxOzMwNzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="z" type="Integer" array="False" size=""/>
+            <assign variable="z" expression="count()"/>
+            <call expression="check(z)"/>
+        </body>
+    </function>
+    <function name="check" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <if expression="a%2=0">
+                <then>
+                    <output expression="&quot;The number of digits are even&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The number of digits are odd&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="count" type="Integer" variable="c">
+        <parameters/>
+        <body>
+            <declare name="i, n, c, a" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="c" expression="0"/>
+            <while expression="n!=0">
+                <assign variable="a" expression="n%10"/>
+                <assign variable="c" expression="c+1"/>
+                <assign variable="n" expression="n/10"/>
+            </while>
+            <output expression="&quot;The number of digits of the number are: &quot;&amp;c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

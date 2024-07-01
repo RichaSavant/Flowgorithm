@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Nandini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-28 09:11:24 AM"/>
+        <attribute name="created" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0yODswODozNzozMyBBTTsyOTc5"/>
+        <attribute name="edited" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0yODswOToxMToyNCBBTTsyOzMwODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sum, x, y, n, i" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter a number of terms you want&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="x" expression="power(2,i)"/>
+                <assign variable="y" expression="factorial(i+1)"/>
+                <assign variable="sum" expression="sum+x/y"/>
+            </for>
+            <output expression="&quot;The sum of the factorial series is: &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+    <function name="factorial" type="Integer" variable="fact">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fact, i" type="Real" array="False" size=""/>
+            <assign variable="fact" expression="1"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="fact" expression="fact*i"/>
+            </for>
+        </body>
+    </function>
+    <function name="power" type="Integer" variable="c">
+        <parameters>
+            <parameter name="m" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="c" type="Real" array="False" size=""/>
+            <assign variable="c" expression="m^n"/>
+        </body>
+    </function>
+</flowgorithm>

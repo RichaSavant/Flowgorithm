@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Nandini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-15 12:58:35 PM"/>
+        <attribute name="created" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0xNTsxMDowMzowMSBBTTsyOTU2"/>
+        <attribute name="edited" value="TmFuZGluaTtMQVBUT1AtMDczOEo0TFM7MjAyMi0wMS0xNTsxMjo1ODozNSBQTTsxOzMwOTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="z" type="Integer" array="False" size=""/>
+            <assign variable="z" expression="even()"/>
+            <call expression="factorial(z)"/>
+        </body>
+    </function>
+    <function name="even" type="Integer" variable="count">
+        <parameters/>
+        <body>
+            <declare name="count, a, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="count" expression="0"/>
+            <while expression="n!=0">
+                <assign variable="a" expression="n%10"/>
+                <if expression="a%2=0">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="n" expression="n/10"/>
+            </while>
+            <output expression="&quot;The number of even digits of the number is: &quot;&amp;count" newline="True"/>
+        </body>
+    </function>
+    <function name="factorial" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fac, q" type="Integer" array="False" size=""/>
+            <assign variable="fac" expression="1"/>
+            <assign variable="q" expression="1"/>
+            <while expression="q&lt;=a">
+                <assign variable="fac" expression="fac*q"/>
+                <assign variable="q" expression="q+1"/>
+            </while>
+            <output expression="&quot;The factorial of the number of even digits for number is: &quot;&amp;fac" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
