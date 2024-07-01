@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-12 12:10:49 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTEtMTI7MTI6MDY6NTIgQU07Mjc5NQ=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTEtMTI7MTI6MTA6NDkgQU07MTsyOTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="side1" type="Real" array="False" size=""/>
+            <declare name="side2" type="Real" array="False" size=""/>
+            <declare name="side3" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter side 1, side 2 and side 3&quot;" newline="True"/>
+            <input variable="side1"/>
+            <input variable="side2"/>
+            <input variable="side3"/>
+            <if expression="side1=side2">
+                <then>
+                    <if expression="side2=side3">
+                        <then>
+                            <output expression="&quot;The triangle is equilateral.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The triangle is isosceles.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="side2=side3">
+                        <then>
+                            <output expression="&quot;The triangle is isosceles.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The triangle is scalene.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

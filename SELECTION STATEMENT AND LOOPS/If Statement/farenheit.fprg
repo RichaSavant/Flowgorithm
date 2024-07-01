@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-12 12:06:42 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTEtMTI7MTI6MDI6MzggQU07Mjc5NQ=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTEtMTI7MTI6MDY6NDIgQU07MTsyOTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="temperature" type="Integer" array="False" size=""/>
+            <declare name="farenheit" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the temperature in celcius.&quot;" newline="True"/>
+            <input variable="temperature"/>
+            <assign variable="farenheit" expression="(temperature*9/5)+32"/>
+            <output expression="&quot;The temperature in farenheit is:&quot; &amp;farenheit" newline="True"/>
+            <if expression="farenheit&gt;20">
+                <then>
+                    <output expression="&quot;It is hot.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;It is cold.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

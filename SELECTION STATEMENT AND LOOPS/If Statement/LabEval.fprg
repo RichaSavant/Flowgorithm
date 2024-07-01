@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-12 09:29:00 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTEtMTI7MDg6NDY6MzYgQU07MjgwNg=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTEtMTI7MDk6Mjk6MDAgQU07MTsyOTA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="customerid" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="unitsconsumed" type="Integer" array="False" size=""/>
+            <declare name="one" type="Real" array="False" size=""/>
+            <declare name="two" type="Real" array="False" size=""/>
+            <declare name="three" type="Real" array="False" size=""/>
+            <declare name="subchargethree" type="Real" array="False" size=""/>
+            <declare name="totalthree" type="Real" array="False" size=""/>
+            <declare name="four" type="Real" array="False" size=""/>
+            <declare name="subchargefour" type="Real" array="False" size=""/>
+            <declare name="totalfour" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the customer ID.&quot;" newline="True"/>
+            <input variable="customerid"/>
+            <output expression="&quot;Please enter the name of the customer.&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Please enter the units consumed.&quot;" newline="True"/>
+            <input variable="unitsconsumed"/>
+            <assign variable="one" expression="unitsconsumed*1.20"/>
+            <assign variable="two" expression="unitsconsumed*1.50"/>
+            <assign variable="three" expression="unitsconsumed*1.80"/>
+            <assign variable="subchargethree" expression="(15*three)/100"/>
+            <assign variable="totalthree" expression="three+subchargethree"/>
+            <assign variable="four" expression="unitsconsumed*2.00"/>
+            <assign variable="subchargefour" expression="(15*four)/100"/>
+            <assign variable="totalfour" expression="four+subchargefour"/>
+            <if expression="unitsconsumed&lt;=199">
+                <then>
+                    <output expression="&quot;Customer ID:&quot; &amp;customerid &amp;&#13;&#10;&quot; Customer name:&quot; &amp;name &amp;&#13;&#10;&quot; Units consumed:&quot; &amp;unitsconsumed &amp;&#13;&#10;&quot; Amount charges @Rs.1.20 per unit:&quot; &amp;one &amp;&#13;&#10;&quot; Amount to be paid by customer:&quot; &amp;one" newline="True"/>
+                </then>
+                <else>
+                    <if expression="unitsconsumed&lt;400">
+                        <then>
+                            <output expression="&quot;Customer ID:&quot; &amp;customerid &amp;&#13;&#10;&quot; Customer name:&quot; &amp;name &amp;&#13;&#10;&quot; Units consumed:&quot; &amp;unitsconsumed &amp;&#13;&#10;&quot; Amount charges @Rs.1.50 per unit:&quot; &amp;two &amp;&#13;&#10;&quot; Amount to be paid by customer:&quot; &amp;two" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="unitsconsumed&lt;600">
+                                <then>
+                                    <output expression="&quot;Customer ID:&quot; &amp;customerid &amp;&#13;&#10;&quot; Customer name:&quot; &amp;name &amp;&#13;&#10;&quot; Units consumed:&quot; &amp;unitsconsumed &amp;&#13;&#10;&quot; Amount charges @Rs.1.80 per unit:&quot; &amp;three &amp;&#13;&#10;&quot; Subcharge amount:&quot; &amp;subchargethree &amp;&#13;&#10;&quot; Net amount to be paid by customer:&quot; &amp;totalthree" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Customer ID:&quot; &amp;customerid &amp;&#13;&#10;&quot; Customer name:&quot; &amp;name &amp;&#13;&#10;&quot; Units consumed:&quot; &amp;unitsconsumed &amp;&#13;&#10;&quot; Amount charges @Rs.2.00 per unit:&quot; &amp;four &amp;&#13;&#10;&quot; Subcharge amount:&quot; &amp;subchargefour &amp;&#13;&#10;&quot; Net amount to be paid by customer:&quot; &amp;totalfour" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

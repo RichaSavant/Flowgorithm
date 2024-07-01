@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-12 12:15:23 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTEtMTI7MTI6MTE6MDUgQU07Mjc4OQ=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1ENjY5TUlVOzIwMjEtMTEtMTI7MTI6MTU6MjMgQU07MTsyOTAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <declare name="num2" type="Integer" array="False" size=""/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <declare name="difference" type="Integer" array="False" size=""/>
+            <declare name="product" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the 2 numbers.&quot;" newline="True"/>
+            <input variable="num1"/>
+            <input variable="num2"/>
+            <assign variable="sum" expression="num1+num2"/>
+            <assign variable="difference" expression="num1-num2"/>
+            <assign variable="product" expression="num1*num2"/>
+            <if expression="num1=num2">
+                <then>
+                    <output expression="sum" newline="True"/>
+                </then>
+                <else>
+                    <if expression="num1&gt;num2">
+                        <then>
+                            <output expression="difference" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="product" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
