@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-08 02:22:29 PM"/>
+        <attribute name="created" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wODswMjowMTozOSBQTTsyMTE3"/>
+        <attribute name="edited" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wODswMjoyMjoyOSBQTTsxOzIyMjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b" type="Real" array="False" size=""/>
+            <declare name="s" type="String" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="1"/>
+            <while expression="c!=0">
+                <output expression="&quot;Enter the two numbers.&quot;" newline="True"/>
+                <input variable="a"/>
+                <input variable="b"/>
+                <output expression="&quot;Enter the operation to be performed. (+,-,*,/)&quot;" newline="True"/>
+                <input variable="s"/>
+                <if expression="s=&quot;+&quot;">
+                    <then>
+                        <output expression="a+b" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="s=&quot;-&quot;">
+                    <then>
+                        <output expression="a-b" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="s=&quot;*&quot;">
+                    <then>
+                        <output expression="a*b" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="s=&quot;/&quot;">
+                    <then>
+                        <output expression="a/b" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Reset calculator?&#13;&#10;yes - enter 1&#13;&#10;no - enter 0&quot;" newline="True"/>
+                <input variable="c"/>
+            </while>
+            <output expression="&quot;end.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

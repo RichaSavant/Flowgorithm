@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Swaraj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-23 10:21:12 AM"/>
+        <attribute name="created" value="U3dhcmFqO1JJU0hJU0FJOzIwMjItMDEtMjM7MDk6NTk6MjkgQU07MjQ5NQ=="/>
+        <attribute name="edited" value="U3dhcmFqO1JJU0hJU0FJOzIwMjItMDEtMjM7MTA6MjE6MTIgQU07MTsyNTc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N, count" type="Integer" array="False" size=""/>
+            <declare name="sorn" type="String" array="False" size=""/>
+            <declare name="str1" type="String" array="True" size="10"/>
+            <declare name="str2" type="String" array="True" size="10"/>
+            <declare name="num1" type="Integer" array="True" size="10"/>
+            <declare name="num2" type="Integer" array="True" size="10"/>
+            <output expression="&quot;Do you want to enter strings or numbers&quot;" newline="True"/>
+            <output expression="&quot;press s for string&quot;" newline="True"/>
+            <output expression="&quot;press n for number&quot;" newline="True"/>
+            <input variable="sorn"/>
+            <assign variable="count" expression="0"/>
+            <if expression="sorn==&quot;n&quot;">
+                <then>
+                    <output expression="&quot;How many numbers do you want to enter into the array&quot;" newline="True"/>
+                    <input variable="N"/>
+                    <output expression="&quot;Enter the numbers for array1&quot;" newline="True"/>
+                    <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                        <input variable="num1[i]"/>
+                    </for>
+                    <output expression="&quot;Enter the numbers for array2&quot;" newline="True"/>
+                    <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                        <input variable="num2[i]"/>
+                    </for>
+                    <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                        <if expression="num1[i]==num2[i]">
+                            <then/>
+                            <else>
+                                <assign variable="count" expression="count+1"/>
+                            </else>
+                        </if>
+                    </for>
+                </then>
+                <else>
+                    <output expression="&quot;How many characters do you want to enter into the array&quot;" newline="True"/>
+                    <input variable="N"/>
+                    <output expression="&quot;Enter the characters for array1&quot;" newline="True"/>
+                    <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                        <input variable="str1[i]"/>
+                    </for>
+                    <output expression="&quot;Enter the characters for array2&quot;" newline="True"/>
+                    <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                        <input variable="str2[i]"/>
+                    </for>
+                    <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                        <if expression="str1[i]==str2[i]">
+                            <then/>
+                            <else>
+                                <assign variable="count" expression="count+1"/>
+                            </else>
+                        </if>
+                    </for>
+                </else>
+            </if>
+            <output expression="&quot;The hamming distance is &quot;" newline="True"/>
+            <output expression="count" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
