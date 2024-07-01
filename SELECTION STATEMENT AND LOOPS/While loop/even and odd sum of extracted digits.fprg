@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-08 01:33:54 PM"/>
+        <attribute name="created" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wODsxMTo1ODo1MCBBTTsyMTA3"/>
+        <attribute name="edited" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wODswMTozMzo1NCBQTTsyOzIyMjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, a, oddsum, evensum" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number.&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="evensum" expression="0"/>
+            <assign variable="oddsum" expression="0"/>
+            <while expression="num!=0">
+                <assign variable="a" expression="num%10"/>
+                <if expression="a%2=0">
+                    <then>
+                        <assign variable="evensum" expression="evensum+a"/>
+                    </then>
+                    <else>
+                        <assign variable="oddsum" expression="oddsum+a"/>
+                    </else>
+                </if>
+                <assign variable="num" expression="num/10"/>
+            </while>
+            <output expression="&quot;The sum of the even digits is: &quot; &amp;evensum &amp; &quot;. The sum of the odd digits is: &quot; &amp;oddsum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

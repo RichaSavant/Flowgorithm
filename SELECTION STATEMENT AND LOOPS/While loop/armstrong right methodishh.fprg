@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rishika"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-08 07:42:08 PM"/>
+        <attribute name="created" value="UmlzaGlrYTtERVNLVE9QLUMzQUVCSks7MjAyMS0xMi0wMzswODozNDoxMCBBTTszMDIx"/>
+        <attribute name="edited" value="UmlzaGlrYTtERVNLVE9QLUMzQUVCSks7MjAyMS0xMi0wMzswODo1Njo0NiBBTTsxOzMxNDI="/>
+        <attribute name="edited" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wODswNzo0MjowOCBQTTsxOzIyMzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, sum, a, x, dig, copy" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="x" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="copy" expression="num"/>
+            <while expression="num!=0">
+                <assign variable="dig" expression="num/10"/>
+                <assign variable="x" expression="x+1"/>
+            </while>
+            <while expression="num!=0">
+                <assign variable="a" expression="num%10"/>
+                <for variable="x" start="1" end="" direction="inc" step="1">
+                    <assign variable="" expression=""/>
+                </for>
+                <assign variable="sum" expression="sum + a*a*a"/>
+                <assign variable="num" expression="num/10"/>
+            </while>
+            <if expression="sum==copy">
+                <then>
+                    <output expression="&quot;it is an armstrong number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;it is not an armstrong number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

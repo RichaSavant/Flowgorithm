@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rishika"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-03 08:56:46 AM"/>
+        <attribute name="created" value="UmlzaGlrYTtERVNLVE9QLUMzQUVCSks7MjAyMS0xMi0wMzswODozNDoxMCBBTTszMDIx"/>
+        <attribute name="edited" value="UmlzaGlrYTtERVNLVE9QLUMzQUVCSks7MjAyMS0xMi0wMzswODo1Njo0NiBBTTsxOzMxNDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, sum, a, copy" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="copy" expression="num"/>
+            <while expression="num!=0">
+                <assign variable="a" expression="num%10"/>
+                <assign variable="sum" expression="sum + a*a*a"/>
+                <assign variable="num" expression="num/10"/>
+            </while>
+            <if expression="sum==copy">
+                <then>
+                    <output expression="&quot;it is an armstrong number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;it is not an armstrong number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

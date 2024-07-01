@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-08 11:44:38 AM"/>
+        <attribute name="created" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wODsxMDoyMTowMCBBTTsyMDkx"/>
+        <attribute name="edited" value="QWRtaW47UEVBQ0g7MjAyMS0xMi0wODsxMTo0NDozOCBBTTsyOzIyMTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, a" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number.&quot;" newline="True"/>
+            <input variable="num1"/>
+            <assign variable="a" expression="0"/>
+            <while expression="num1!=0">
+                <assign variable="a" expression="num1%10"/>
+                <output expression="a" newline="True"/>
+                <assign variable="num1" expression="num1/10"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
